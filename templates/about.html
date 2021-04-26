@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CADO Creations</title>
+
+    <!-- Bootstrap and Bootswatch CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/style-about.css">
+
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://unpkg.com/d3-v6-tip@1.0.6/build/d3-v6-tip.js"></script>
+    <script src="https://unpkg.com/jeezy@1.13.1/lib/jeezy.min.js"></script>
+
+    <!-- icon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../static/img/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../static/img/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../static/img/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../static/img/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../static/img/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../static/img/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../static/img/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/img/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/img/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../static/img/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/img/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../static/img/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/img/icon/favicon-16x16.png">
+    <link rel="manifest" href="../static/img/icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../static/img/icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- font family Baloo -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet">
+</head>
+
+<body class="body">
+
+    <!--Navbar-->
+    <!--Create nav bar with collapse for small screen-->
+    <nav class=" navbar-expand-lg navbar-light navbar nav-color">
+
+
+        <a class="navbar-brand" href="/">
+            <img src="../static/img/Cado-Creations.png" alt="logo" style="width: 300px; height:80px;">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--convert the nav bar to small size with end the bar format-->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" style="color:#f2e880" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color:#f2e880" href="/analysis">Analysis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color:#f2e880" href="/ml">Price Predictor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color:#f2e880" href="/tables">Tables</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                    <a class="nav-link"style= "color:#f2e880" href="/data">Data</a>
+                </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" style="color:#f2e880" href="/resources">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color:#f2e880" href="/about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End of Navbar -->
+
+    <div> 
+        <img class="centerImage imageformat img-responsive imageFalling animation"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHrO7xUdjMhYTqMaPES1LOBcenXWoo4abSwgcaPcTPOo5f4ObA"
+        alt="avocado image">
+    </div>
+    
+    <h1 id="AboutSection" class="aboutSectionText animation3"> About Us</h1>
+    <p> 
+        Avocados are the darling of the produce section. They’re the go-to ingredient for guacamole dips at parties. And
+        they're also turning up in everything from salads and wraps to smoothies and even brownies. So what, exactly,
+        makes this pear-shaped berry (yes, that’s right!) such a super food?
+    </p>
+
+    <!--main image and about section -->
+
+    <h1 id="products" class="products">Our Team</h1>
+
+    <!--this next div gets all of the block and alin them one ove the other with block: align-->
+
+    <!-- first class of avocados-->
+
+
+    <div class="inline">
+        <div> 
+            <img class="productsImage"
+            src="https://www.avoseedo.com/wp-content/uploads/2015/09/avoseedo_hass_avocado_ver_florida_avocado.jpg"
+            alt="avocado bacon"> 
+        </div>
+
+        <div>
+            <p> <b class="classesAvocados">Phillecia Qualls</b> vocado is often recognized as the archetypal avocado,
+                green in color, pear-like in shape, and r.</p>
+        </div>
+    </div>
+
+    <!--second class of avocados-->
+
+    <div class="inline">
+        <div>
+            <img class="productsImage" id="fuerteAvocado"
+                src="https://www.avoseedo.com/wp-content/uploads/2015/09/avoseedo_hass_avocado_ver_florida_avocado.jpg"
+                alt="Avocado Fuerte">
+        </div>
+
+        <div>
+            <p><b class="classesAvocados">Luis Fernando Ruiz</b> avocado is often recognized as the archetypal avocado,
+                green in color, pear-like in shape, and ranging from six to twelve ounces in size. It has smooth,
+                medium-thin skin that peels easily, with dense, pale green flesh. It is marginally oily with a rich,
+                creamy flavor and notes of hazelnut, and it is still considered by many to be the best tasting avocado.
+                The Fuerte avocado tree is large and spreading, one of the more cold-hardy varieties, and the leaves
+                have a strong anise smell when crushed. </p>
+        </div>
+
+    </div>
+
+    <!--third member-->
+
+    <div class="inline">
+
+        <div><img class="productsImage"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFqksUiMLCg-dfyFe8nRQnPVbuwd_Y2b3n9-k3nfcj2xFIWsMc">
+        </div>
+
+        <div>
+            <p><b class="classesAvocados">Karen Pearson</b>avocado, a descendant of the famed hass variety, has thick,
+                pebbly skin like the hass avocado, but has a rounder shape and is slightly larger in size, ranging from
+                six to fifteen ounces. It also remains green in color when ripe, unlike the hass avocado, which darkens
+                to almost black. </p>
+        </div>
+
+    </div>
+
+    <!--fourth member-->
+
+    <div class="inline">
+        <div><img class="productsImage"
+                src="https://goodeggs1.imgix.net/product_photos/LQeOHGMaQIaPb4Lk7xHm_avocado%20%281%29%20%280fa355fb57c28d10890c2b5d934cafb6c2367e6a%29.jpg?w=840&h=525&fm=jpg&q=80&fit=crop"
+                alt="avocado hass"> </div>
+
+        <div>
+            <p><b class="classesAvocados">Harrison Feldman </b> avocado is known for its quintessentially tumbled
+                leathery fairly thick skin that turns near black when fully ripe. The flesh closest to the skin is a
+                lush pale lime green color and as it nears the central pit it develops a rich creamy yellow tone and
+                softer, oil rich texture. Hass avocado's flavor reflects its texture - creamy and smooth with a nutty
+                and sweet finish. </p>
+        </div>
+
+    </div>
+
+
+
+    <!--end of member's list -->
+
+    <!--this  div wraps all my div-->
+    </div>
+
+
+
+<!-- end of fluid-container-div  -->
+    </div>
+
+
+
+
+
+
+
+
+
+<!-- Footer-->
+<div id="footer">
+    <p>CADO Creations&copy;2021</p>
+</div>
+
+</body>
+
+</html>
