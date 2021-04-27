@@ -1,15 +1,18 @@
 # This app serve Machine Learning to the templates
-import numpy as np
-from flask import Flask, jsonify, render_template
-from sqlalchemy import create_engine, desc, func
-from sqlalchemy.ext.automap import automap_base
-from sqlalchemy.orm import sessionmaker
+from flask import Flask, render_template, jsonify, send_from_directory, request
+import json
 import pandas as pd
+import numpy as np
+import os
+from modelHelper import ModelHelper
+
+#init app and class
+app = Flask(__name__)
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+modelHelper = ModelHelper()
+
 
 # Flask routes
-app = Flask(__name__)
-
-
 # Homepage
 @app.route('/')
 def home():
