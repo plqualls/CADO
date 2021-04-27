@@ -60,7 +60,7 @@ body {
     /* Set the fixed height of the footer here */
     height: 1px;
     padding-top: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 0px;
     text-align: center;
     background-color: #f2e880;
 }
@@ -78,8 +78,58 @@ body {
     opacity: 0.5;
 }
 
+#viz1619480528532{
+    font-family: "Baloo Tamma 2";
+    margin-bottom: 100px;
+    padding-bottom: 100px;
+}
 
+.card-header{
+    font-family: 'Baloo Tamma 2', cursive;
+    font-weight: 700;
+    position: center;
+    color: #6c8f32;
+    background-color: #f2e880;
+    font-size: 30px;
+}
 
+.card-body {
+    font-family: 'Baloo Tamma 2', cursive;
+    font-weight: 700;
+    position: center;
+    color: #6c8f32;
+    background-color: #f2e880;
+    font-size: 30px;
+}
+
+.form-group {
+    background-color: #f2e880;
+    font-family: 'Baloo Tamma 2', cursive;
+    font-weight: 1000;
+    position: center;
+    color: #6c8f32;
+    background-color: #f2e880;
+}
+
+.btn{
+    background-color: #f2e880;
+    font-family: 'Baloo Tamma 2', cursive;
+    font-weight: 1000;
+    position: center;
+    text-align: center;
+    color: #f2e880;
+    background-color: #356211;
+}
+
+#output {
+    font-family: 'Baloo Tamma 2', cursive;
+    font-weight: 1000;
+    font-size: 125px;
+    text-align: center;
+    color: #356211;
+    margin-top: 30%;
+    margin-bottom: 30%;
+}
 /* media queries which will only be activated at specific screen sizes */
 
 @media screen and (max-width:1000px) {
