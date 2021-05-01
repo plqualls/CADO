@@ -61,6 +61,24 @@ columns =
     'South Central', 'Southeast', 'Spokane', 'St. Louis', 'Syracuse',
     'Tampa', 'Total U.S.', 'West', 'West Tex/New Mexico', '01', '02', '03',
     '04', '05', '06', '07', '08', '09', '10', '11', '12'
+
+'total_volume', 'year', 'Atlanta', 'Baltimore/Washington', 'Boise',
+       'Boston', 'Buffalo/Rochester', 'California', 'Charlotte', 'Chicago',
+       'Cincinnati/Dayton', 'Columbus', 'Dallas/Ft. Worth', 'Denver',
+       'Detroit', 'Grand Rapids', 'Great Lakes', 'Harrisburg/Scranton',
+       'Hartford/Springfield', 'Houston', 'Indianapolis', 'Jacksonville',
+       'Las Vegas', 'Los Angeles', 'Louisville', 'Miami/Ft. Lauderdale',
+       'Midsouth', 'Nashville', 'New Orleans/Mobile', 'New York', 'Northeast',
+       'Northern New England', 'Orlando', 'Philadelphia', 'Phoenix/Tucson',
+       'Pittsburgh', 'Plains', 'Portland', 'Raleigh/Greensboro',
+       'Richmond/Norfolk', 'Roanoke', 'Sacramento', 'San Diego',
+       'San Francisco', 'Seattle', 'South Carolina', 'South Central',
+       'Southeast', 'Spokane', 'St. Louis', 'Syracuse', 'Tampa', 'Total U.S.',
+       'West', 'West Tex/New Mexico', '02', '03', '04', '05', '06', '07', '08',
+       '09', '10', '11', '12'
+
+
+
 """
 @app.route('/makePredictions', methods=['POST'])
 def predictions():
@@ -109,7 +127,42 @@ def predictions():
 
     return render_template('machine_learning.html', predictions=out) #jsonify({"prediction": out})
 
+@app.route('/data')
+def data():
+    df = pd.read_csv('Tableau/avocado-updated-2020.csv')
+    out = []
 
+    for index, row in df.iterrows():
+        date = row['date']
+        price = row['average_price']
+        volume = row['total_volume']
+        PLU_4046 = row['4046']
+        PLU_4225 = row['4225']
+        PLU_4770 = row['4770']
+        total_bags = row['total_bags']
+        type = row['type']
+        year = row['year']
+        geography = row['geography']
+        out.append({
+            'date': date,
+            'price': price,
+            'volume': volume,
+            'PLU_4046': PLU_4046,
+            'PLU_4225': PLU_4225,
+            'PLU_4770': PLU_4770,
+            'total_bags': total_bags,
+            'type': type,
+            'year': year,
+            'geography':geography
+        })
+    
+    return jsonify(out)
+
+# @app.route('/table')
+# def table():
+#     df = pd.read_csv('Tableau/avocado-updated-2020.csv')
+#     table = df.to_html()
+#     return table
 
 
 if __name__ == '__main__':

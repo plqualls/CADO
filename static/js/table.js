@@ -1,19 +1,4 @@
 // Append the dropdown button for the regions.
-let regions = ['Total U.S.',
-    // 'Albany', # Avoid perfect multicollinearity for all dummy variables notebook cell:19
-    'Atlanta',
-    'Baltimore/Washington', 'Boise', 'Boston', 'Buffalo/Rochester',
-    'California', 'Charlotte', 'Chicago', 'Cincinnati/Dayton', 'Columbus',
-    'Dallas/Ft. Worth', 'Denver', 'Detroit', 'Grand Rapids', 'Great Lakes',
-    'Harrisburg/Scranton', 'Hartford/Springfield', 'Houston',
-    'Indianapolis', 'Jacksonville', 'Las Vegas', 'Los Angeles',
-    'Louisville', 'Miami/Ft. Lauderdale', 'Midsouth', 'Nashville',
-    'New Orleans/Mobile', 'New York', 'Northeast', 'Northern New England',
-    'Orlando', 'Philadelphia', 'Phoenix/Tucson', 'Pittsburgh', 'Plains',
-    'Portland', 'Raleigh/Greensboro', 'Richmond/Norfolk', 'Roanoke',
-    'Sacramento', 'San Diego', 'San Francisco', 'Seattle', 'South Carolina',
-    'South Central', 'Southeast', 'Spokane', 'St. Louis', 'Syracuse',
-    'Tampa', 'West', 'West Tex/New Mexico']
 
 function dropdown() {
     regions.forEach(region => {
@@ -23,14 +8,53 @@ function dropdown() {
     })
 };
 
-
 dropdown()
 
+// Generate de table
+d3.json("/data").then(data=> {
+    console.log(data[0])
+    // console.log(data[0].date)
+    // data.forEach(element => {
+    //     console.log(element)
+    generateTable(data)
+    });
+
 // filter the table
+function filterData(userInput) {
+    let inputValue = {}
+    let date = d3.select("#date").property('value')
+    let price = d3.select("#price").property('value')
+    let volume = d3.select("#volume").property('value')
+    let type = d3.select("#type").property('value')
+    let region = d3.select("#region").property('value')
+    
+    inputValue[date] = date
+    inputValue[price] = price
+    inputValue[volume] = volume
+    inputValue[type] = type
+    inputValue[region] = region
+
+    console.log(inputValue)
+    return inputValue
+}
+
+console.log(filterData())
 
 // read the data
 
-var data = d3.csv('/tables')
+// d3.json('/table').then (data=> 
+//     console.log(data)
+//     )
+// /Tableau/avocado-updated-2020.csv
+// d3.json("/data").then(data=> {
+//     // console.log(data[0])
+//     // console.log(data[0].date)
+//     data.forEach(element => {
+//         console.log(element)
+
+//     });
+
+// })
 
 // console.log(tableData)
 // console.log(Object.entries)
@@ -42,48 +66,73 @@ d3.selectAll("button").on("click", function () {
 });
 
 
-// function generateTable(table, data) {
-//     tableHtml = d3.select("tbody")
-//     tableHtml.html("")
-//     for (let element of data) {
-//         // add a row 
-//         let row = table.insertRow();
-//         for (key in element) {
-//             // creates a new cell
-//             let cell = row.insertCell();
-//             // creates a new text node
-//             let text = document.createTextNode(element[key]);
-//             // appends the text node to the cell
-//             cell.appendChild(text);
-//         }
-//     }
-// };
+
+function generateTable(data) {
+    tableBody = d3.select("tbody")
+    // tableHead = d3.select('thead')
+    // console.log(Object.entries(data))
+    // let rowHead = tableHead.append("tr")
+    // let cellHead = rowHead.append("th")
+    // cellHead.text(key)
+    // add a row
+    data.forEach(element =>{
+        
+        let rowBody = tableBody.append("tr")
+        Object.entries(element).forEach(([key, value]) => {
+        
+        let cellBody = rowBody.append("td");
+        cellBody.text(value);
+        
+        });
+    })
+};
 // grab table and pass that to our function
 // let table = document.querySelector("tbody");
 // generateTable(table, tableData);
 // --------------------------------------------
 //
+
+// get the input
+
+
+
 //filter the table function
 function filterData(userInput) {
-    input = d3.select(userInput);
-    inputValue = input.property("value");
+    let inputValue = {}
+    let date = d3.select("#date").property('value')
+    let price = d3.select("#price").property('value')
+    let volume = d3.select("#volume").property('value')
+    let type = d3.select("#type").property('value')
+    let region = d3.select("#region").property('value')
+    
+    inputValue[date] = date
+    inputValue[price] = price
+    inputValue[volume] = volume
+    inputValue[type] = type
+    inputValue[region] = region
+
+    console.log(inputValue)
     return inputValue
 }
+
+console.log(filterData())
+
+// console.log(d3.select("#date"))
 
 // select the button(event)
 filterButton = d3.select("#filter-btn");
 
-// call `on` (event lessener) to run the function that will work 
+// call `on` (event listnener) to run the function that will work 
 filterButton.on("click", () => {
+    console.log(filterData())
     // filter the input from the table
-    filterTable = tableData.filter(item => (item.datetime === filterData("#datetime") || filterData("#datetime") === "")
-        && (item.city === filterData("#city") || filterData("#city") === "")
-        && (item.state === filterData("#state") || filterData("#state") === "")
-        && (item.country === filterData("#country") || filterData("#country") === "")
-        && (item.shape === filterData("#shape") || filterData("#shape") === ""));
-    console.log("filterTable", filterTable);
-    generateTable(table, filterTable);
-
+    // filterTable = tableData.filter(item => (item.datetime === filterData("#datetime") || filterData("#datetime") === "")
+    //     && (item.city === filterData("#city") || filterData("#city") === "")
+    //     && (item.state === filterData("#state") || filterData("#state") === "")
+    //     && (item.country === filterData("#country") || filterData("#country") === "")
+    //     && (item.shape === filterData("#shape") || filterData("#shape") === ""));
+    // console.log("filterTable", filterTable);
+    // generateTable(table, filterTable);
 
 });
 
@@ -92,9 +141,9 @@ resetButton = d3.select("#reset-btn")
 resetButton.on("click", () => {
     generateTable(table, tableData)
     // clear the input fileds 
-    document.getElementById('datetime').value = ''
-    document.getElementById('city').value = ''
-    document.getElementById('state').value = ''
+    document.getElementById('date').value = ''
+    document.getElementById('price').value = ''
+    document.getElementById('volume').value = ''
     document.getElementById('country').value = ''
     document.getElementById('shape').value = ''
 });
