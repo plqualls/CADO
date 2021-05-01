@@ -53,19 +53,19 @@ body {
     margin-bottom: 100px;
 }
 
-#footer {
-    position: absolute;
+footer {
+    
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
-    height: 1px;
+    height: 10%;
     padding-top: 20px;
     padding-bottom: 0px;
     text-align: center;
     background-color: #f2e880;
 }
 
-#footer p {
+footer p {
     margin: 0;
     font-size: 25px;
 }
@@ -82,6 +82,12 @@ body {
     font-family: "Baloo Tamma 2";
     margin-bottom: 100px;
     padding-bottom: 100px;
+}
+
+.card {
+    border:#212b0c;
+    height: 100%;
+    margin-bottom: 50%;
 }
 
 .card-header{
@@ -115,7 +121,7 @@ body {
     background-color: #f2e880;
     font-family: 'Baloo Tamma 2', cursive;
     font-weight: 1000;
-    position: center;
+    position: relative;
     text-align: center;
     color: #f2e880;
     background-color: #356211;
@@ -124,12 +130,38 @@ body {
 #output {
     font-family: 'Baloo Tamma 2', cursive;
     font-weight: 1000;
-    font-size: 125px;
+    font-size: 80px;
     text-align: center;
     color: #356211;
     margin-top: 30%;
     margin-bottom: 30%;
 }
+
+input {
+    width: 200px;
+    font-size: 20px;
+}
+
+#region {
+    width: 200px;
+    font-size: 20px;
+}
+
+#month{
+    width: 200px;
+    font-size: 20px;
+
+}
+
+#filter{
+    background-color: #356211;
+    border: #356211;
+}
+
+li {
+    background-color:#f2e880;
+}
+
 /* media queries which will only be activated at specific screen sizes */
 
 @media screen and (max-width:1000px) {
