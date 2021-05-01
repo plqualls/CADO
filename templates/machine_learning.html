@@ -93,47 +93,99 @@
                 <div class="card border-primary mb-3" style="max-width: 20rem;">
                     <div class="card-header">Filters</div>
                     <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-12" style="height: 300px;">
-                                <div class="form-group">
-                                    <label class="col-form-label" for="type">Type</label>
-                                    <select id="type">
-                                        <option value="1">Organic</option>
-                                        <option value="0">Conventional</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-form-label" for="month">Month</label>
-                                    <select id="month">
-                                        <option value="1">January</option>
-                                        <option value="2">February</option>
-                                        <option value="3">March</option>
-                                        <option value="4">April</option>
-                                        <option value="5">May</option>
-                                        <option value="6">June</option>
-                                        <option value="7">July</option>
-                                        <option value="8">August</option>
-                                        <option value="9">September</option>
-                                        <option value="10">October</option>
-                                        <option value="11">November</option>
-                                        <option value="12">December</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-form-label" for="plu">PLU Code</label>
-                                    <select id="plu">
-                                        <option value="4046">4046</option>
-                                        <option value="4225">4225</option>
-                                        <option value="4770">4770</option>
-                                    </select>
+                        <form action='/makePredictions' method = 'POST'>
+                            <div class="row">
+                                <div class="col-md-12" > 
+                                    <!-- style="height: 500px;" -->
+
+                                    <div class="form-group">
+                                        <ul class="list-group" id="filters">
+                                            <li class="filter list-group-item">
+                                                <label class="col-form-label" for="total_volume">Total volume</label>
+                                                <input class="form-control" id="total_volume"
+                                                    value= 9683400 name='total_volume'>
+                                            </li>
+                                            <li class="filter list-group-item">
+                                                <label class="col-form-label" for="year">Year</label>
+                                                <input id="year" name='year' value=2020>
+                                            </li>
+                                            <li class = "filter list-group-item">
+                                                <label class="col-form-label" for="region">Region</label><br>
+                                                    <select id="region" name="region" onchange="optionChanged(this.value)"></select>
+                                                <!-- <option value="Albany">Albany</option> -->
+                                            </li>
+                                            <li class="filter list-group-item">
+                                                <label class= "col-form-label" for="month">Month</label><br>
+                                                <select id="month" name=month>
+                                                    <!--<option value="01">January</option>-->
+                                                    <option value="02">February</option>
+                                                    <option value="03">March</option>
+                                                    <option value="04">April</option>
+                                                    <option value="05">May</option>
+                                                    <option value="06">June</option>
+                                                    <option value="07">July</option>
+                                                    <option value="08">August</option>
+                                                    <option value="09">September</option>
+                                                    <option value="10">October</option>
+                                                    <option value="11">November</option>
+                                                    <option value="12">December</option>
+                                                </select>
+
+                                            </li>
+                                        </ul> 
+                                    </div>
+                                    <!-- <div class="form-group">
+                                        <label class="col-form-label" for="year">Year</label>
+                                        <input id="year" name='year' value=2020>
+                                        <select id="year" name='year'>
+                                            <option value="2015">2015</option>
+                                            <option value="2016">2016</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2018">2018</option>
+                                            <option value="2019">2019</option>
+                                            <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2022</option>
+                                        </select>
+                                    </div> -->
+                                    <!-- <div class="form-group">
+                                        <label class="col-form-label" for="region">Region</label>
+                                        <label class="col-form-label" for="region">Region</label>
+                                        <select id="region" name="region" onchange="optionChanged(this.value)">
+                                            <option value="Albany">Albany</option>
+                                            
+                                        </select>
+                                    </div> -->
+
+                                    
+                                    <!-- <div class="form-group">
+                                        <label class="col-form-label" for="month">Month</label>
+                                        <select id="month" name=month>
+                                            <option value="01">January</option>
+                                            <option value="02">February</option>
+                                            <option value="03">March</option>
+                                            <option value="04">April</option>
+                                            <option value="05">May</option>
+                                            <option value="06">June</option>
+                                            <option value="07">July</option>
+                                            <option value="08">August</option>
+                                            <option value="09">September</option>
+                                            <option value="10">October</option>
+                                            <option value="11">November</option>
+                                            <option value="12">December</option>
+                                        </select>
+                                    </div> -->
+
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <button type="button" class="btn btn-primary" id="filter">Make Prediction!</button>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button type="submit" value="Submit" class="btn btn-primary" id="filter"
+                                        href="/makePredictions'">Make
+                                        Prediction!</button>
+                                </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -142,11 +194,11 @@
                     <div class="card-header">Price Prediction</div>
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-md-12" style="height: 350px;">
+                            <div class="col-md-12" style="height: 400px;">
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <h1 id="output">0.00</h1>
+                                            <h1 id="output" value=0.00> $ {{ predictions }} <br> pound</h1>
                                         </div>
                                     </div>
                                 </div>
@@ -156,8 +208,17 @@
                 </div>
             </div>
         </div>
+        <div class='row'>
+            <div id="chart">
+            </div>
+        </div>
     </div>
 
-</body>
+    <footer>
+        <p>CADO Creations&copy;2021</p>
+    </footer>
 
+</body>
+<!-- our JS -->
+<script src="../static/js/logic.js"></script>
 </html>

@@ -9,13 +9,14 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-   
+
   }
-  
+  /* avocado man image */
   .imageformat{
     
     border-radius: 50%;
     border: 10px solid green;
+
     
   }
   
@@ -35,23 +36,24 @@
   
   .container{
     padding: 40px;
-    background-color: rgb(60, 169, 113)
+    background-color:#e5d7a8;
   }
   
   .container2{
     
-   padding: 40px;
-   background-color: #533117;
-     animation-name: changeColor;
+    padding: 40px;
+    background-color: #533117;
+    animation-name: changeColor;
     animation-duration: infinite;
     
   }
   
   .title{
     text-align: center;
-    color: #f2e880;
+    color: #533117;
     text-decoration: none;
     line-height: 1.8;
+
     
   }
   
@@ -60,36 +62,39 @@
   .aboutSectionText{
     
     text-align: center;
-      color: #aa471f;
+    color: #aa471f;
     line-height: 1.5;
     text-decoration: underline;
+    font-size: 60px;
+    font-weight: bolder;
   }
   
   
   
   .products{
-    color:#f2e880;
+    color:#356211;
+    font-weight: bolder;
+    font-size:40px;
+    
   }
   
   .productsImage{
     border-radius: 50px;
     float: left;
-   padding: 12px;
+    padding: 5px;
     height: 100px;
     width: auto;
-     
+  
   }
   
   .classesAvocados{
     
-    font-size: 30px ;
+    font-size: 35px ;
     
     
   }
   
-  p {
-    font-family: Arial, Helvetica, Times New Roman;
-  }
+
    
   #fuerteAvocado{
     
@@ -109,12 +114,12 @@
   .inline2{
     display: inline;
     padding: 20px;
-   border-style: solid; 
+    border-style: solid; 
   }
   
   
   #formEmail{
-     padding-top: 50px;
+    padding-top: 50px;
       
     display: inline-block;
   }
@@ -129,7 +134,7 @@
     display: block;
       margin-left: auto;
       margin-right: auto;
-  width: 50%;
+    width: 50%;
     padding-bottom: 65px; 
   }
   
@@ -204,4 +209,8 @@
   @keyframes changeColor {
       from {background-color: red;}
       to {background-color: yellow;}
+  }
+
+  body {
+    background-color: #e5d7a8;
   }
