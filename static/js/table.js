@@ -10,14 +10,12 @@ function dropdown() {
 
 dropdown()
 
-// Generate de table
-d3.json("/data").then(data=> {
+d3.json("../static/js/data.json").then(data=> {
     console.log(data[0])
-    // console.log(data[0].date)
-    // data.forEach(element => {
-    //     console.log(element)
     generateTable(data)
-    });
+})
+
+
 
 // filter the table
 function filterData(userInput) {
@@ -38,7 +36,7 @@ function filterData(userInput) {
     return inputValue
 }
 
-console.log(filterData())
+//console.log(filterData())
 
 // read the data
 
