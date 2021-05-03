@@ -98,6 +98,7 @@
                 <aside class="filters">
                     <div class="panel panel-default">
                         <div class="panel-heading">Filter Search</div>
+                        <hr>
                         <div class="panel-body">
                             <form>
                                 <div class="form-group">
@@ -105,52 +106,34 @@
                                         <li class="filter list-group-item">
                                             <label for="date">Enter a Date</label>
                                             <input class="form-control" id="date" type="text"
-                                                placeholder="1/4/2015" value="1/4/2015" onchange="optionChanged(this.value)">
+                                                placeholder="2015-01-04">
+                                                <!-- value="1/4/2015" -->
                                         </li>
-                                    </ul>
-                                </div>
-                                <div class="form-group">
-                                    <ul class="list-group" id="filters">
                                         <li class="filter list-group-item">
                                             <label for="price">Enter a Price</label>
-                                            <input class="form-control" id="price" type="number" placeholder="2.00"
-                                            onchange="optionChanged(this.value)" value="2.00">
+                                            <input class="form-control" id="price" type="text" 
+                                            placeholder="2.00">
+                                            <!-- value="2.00" onchange="optionChanged(this.value)" -->
                                         </li>
-                                    </ul>
-                                </div>
-                                <div class="form-group">
-                                    <ul class="list-group" id="filters">
-                                        <li class="filter list-group-item">
-                                            <label for="volume">Enter a Total Volume</label>
-                                            <input class="form-control" id="volume" type="number" placeholder="9683400" 
-                                            value = "9683400"
-                                            onchange="optionChanged(this.value)">
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="form-group">
-                                    <ul class="list-group" id="filters">
                                         <li class="filter list-group-item">
                                             <label for="type">Enter a Type</label>
-                                            <select id="type" name="region" onchange="optionChanged(this.value)" value = "conventional">
+                                            <select id="type" name="region">
+                                                <!-- value = "conventional" -->
                                                 <option id='conventional' value="conventional">Conventional</option>
                                                 <option id='organic' value="organic">Organic</option>
                                             </select>
                                         </li>
-                                    </ul>
-                                </div>
-                                <div class="form-group">
-                                    <ul class="list-group" id="filters">
                                         <li class = "filter list-group-item">
                                             <label class="col-form-label" for="region">Region</label><br>
-                                                <select id="region" name="region" onchange="optionChanged(this.value)"></select>
+                                                <select id="region" name="region"></select>
                                             <!-- <option value="Albany">Albany</option> -->
                                         </li>
                                     </ul>
                                 </div>
-                                <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                                
+                                <button id="filter-btn" type="button" class="btn">Filter Table</button>
                                 <br>
-                                <button id="reset-btn" type="button" class="btn btn-default">Reset Filter</button>
+                                <button id="reset-btn" type="button" class="btn">Reset Filter</button>
                             </form>
                         </div>
                     </div>
@@ -180,7 +163,7 @@
                                 
                             </tr>
                         </thead>
-                        <tbody></tbody>
+                        <tbody id = "myTable"></tbody>
                     </table>
                 </div>
             </div>
