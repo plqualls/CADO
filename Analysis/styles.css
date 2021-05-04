@@ -1,0 +1,175 @@
+html, body {
+	height: 100%;
+	margin: 0;
+  min-width: 400px;
+}
+/*Avocado picture format*/
+
+#avocado {
+	position: absolute;
+	text-align: center;
+	bottom: 10%;
+	color: #fff;
+}
+
+#avocado h1 {
+	font-weight: 900;
+	font-size: 10rem;
+	letter-spacing: 0.2rem;
+}
+
+#avocado h2 {
+	font-size: 1.5em;
+  	color: #FFD166;
+  	letter-spacing: 0.2em;
+}
+
+@media only screen and (max-width: 770px) {
+    
+    #avocado {
+      bottom: 10%;
+    }
+  
+    #avocado h1 {
+      font-weight: 900;
+      font-size: 6rem;
+      letter-spacing: 0.2rem;
+    }
+
+    #avocado h2 {
+      font-size: 1em;
+      color: #ffff72;
+      letter-spacing: 0.2rem;
+    }
+  
+}
+
+@media only screen and (max-width: 460px) {
+    
+    #avocado {
+      bottom: 10%;
+    }
+  
+    #avocado h1 {
+      font-weight: 900;
+      font-size: 4rem;
+      letter-spacing: 0.2rem;
+    }
+
+    #avocado h2 {
+      font-size: 0.8rem;
+      color: #ffff72;
+      letter-spacing: 0.2rem;
+    }
+
+    #footer-text li {
+	    font-size: 0.1rem;
+    }
+  
+  
+}
+.bgimg {
+    height: 100%;
+    min-width: 400px;
+    background-image: url("jfej73V.jpg");
+      position: relative;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+    background-size: cover;
+  
+  }
+
+  @media only screen and (max-device-width: 1200x) {
+ 
+    .bgimg-1 {
+        height: 800px;
+        background-size: auto 100%;
+        background-attachment: initial;
+    }
+}
+
+/*Formatting "How it Works" section */
+
+.slide {
+	text-align: center;
+	padding: 1rem;
+}
+
+.slide h1 {
+	padding: 3rem 0 3rem 0;
+	letter-spacing: 0.1rem;
+}
+
+#slide2 {
+	background-color: #f8f6ecf1;
+	color: #363537;
+  padding: 0rem 5rem 1.5rem 5rem;
+}
+
+#slide2 h5 {
+	letter-spacing: 0.1rem;
+}
+
+#slide2 i {
+	font-size: 4rem;
+	padding: 1rem;
+}
+
+#slide2 p {
+	padding: 0.5rem;
+}
+
+/* Format of Cado Creations Dashboard */
+.video-container {
+    max-width: 65%;
+    margin: 0 auto;
+  } 
+
+  .video-container2 {
+    max-width: 40%;
+    margin: 0 auto;
+    
+  } 
+
+  /* Formating for "observations" section*/
+  #plans {
+
+    overflow-x: hidden;
+  }
+
+  #plans h1 {
+    padding-top: 3rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .slide3{
+    padding: 100px 10px 100px 10px;
+    background-color: #B5E2FA;
+    color: #363537;
+  }
+  
+  .slide3 img {
+    height: 500px;
+    width: auto;
+  }
+
+  .slide3 h1{
+    font-size: 4em;
+    text-align: left;
+    padding: 0;
+    padding-bottom: 0.2em;
+  }
+
+  .slide3 p{
+    font-size: 1.2em;
+    text-align: left;
+  }
+
+
+
+
+
