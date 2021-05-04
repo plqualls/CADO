@@ -1,0 +1,15 @@
+let regions = ['Total U.S.', 
+    // 'Albany', # Avoid perfect multicollinearity for all dummy variables notebook cell:19
+    'Atlanta',
+    'Baltimore/Washington', 'Boise', 'Boston', 'Buffalo/Rochester',
+    'California', 'Charlotte', 'Chicago', 'Cincinnati/Dayton', 'Columbus',
+    'Dallas/Ft. Worth', 'Denver', 'Detroit', 'Grand Rapids', 'Great Lakes',
+    'Harrisburg/Scranton', 'Hartford/Springfield', 'Houston',
+    'Indianapolis', 'Jacksonville', 'Las Vegas', 'Los Angeles',
+    'Louisville', 'Miami/Ft. Lauderdale', 'Midsouth', 'Nashville',
+    'New Orleans/Mobile', 'New York', 'Northeast', 'Northern New England',
+    'Orlando', 'Philadelphia', 'Phoenix/Tucson', 'Pittsburgh', 'Plains',
+    'Portland', 'Raleigh/Greensboro', 'Richmond/Norfolk', 'Roanoke',
+    'Sacramento', 'San Diego', 'San Francisco', 'Seattle', 'South Carolina',
+    'South Central', 'Southeast', 'Spokane', 'St. Louis', 'Syracuse',
+    'Tampa', 'West', 'West Tex/New Mexico']
