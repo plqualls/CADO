@@ -1,101 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<head>
+<html>
+
+<head lang="en">
+  <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title>CADO Creations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap and Bootswatch CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="https://unpkg.com/d3-v6-tip@1.0.6/build/d3-v6-tip.js"></script>
-    <script src="https://unpkg.com/jeezy@1.13.1/lib/jeezy.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-    <!-- icon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="../static/img/icon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="../static/img/icon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../static/img/icon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="../static/img/icon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../static/img/icon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="../static/img/icon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="../static/img/icon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="../static/img/icon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../static/img/icon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="../static/img/icon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../static/img/icon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="../static/img/icon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../static/img/icon/favicon-16x16.png">
-    <link rel="manifest" href="../static/img/icon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="../static/img/icon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <!-- Google Font -->
 
-    <!-- font family Baloo -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+
+    <!-- style.css -->
+
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+
+  <title>Cado Analysis</title>
+
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+  <!-- JQuery -->
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
 </head>
 
-<body class="body">
+<body>
+  
+<header id="header">
 
-    <!--Navbar-->
-    <!--Create nav bar with collapse for small screen-->
-    <nav class=" navbar-expand-lg navbar-light navbar nav-color">
+  <!--nav bar code from index.html-->
+
+  <nav class=" navbar-expand-lg navbar-light navbar nav-color">
 
 
-        <a class="navbar-brand" href="/">
-            <img src="../static/img/Cado-Creations.png" alt="logo" style="width: 300px; height:80px;">
-        </a>
+    <a class="navbar-brand" href="/">
+        <img src="../static/img/Cado-Creations.png" alt="logo" style="width: 300px; height:80px;">
+    </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!--convert the nav bar to small size with end the bar format-->
-        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-            <div class= "collapse navbar-collapse justify-content-end">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link" style= "color:#f2e880" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" style= "color:#f2e880" href="/analysis">Analysis</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"style= "color:#f2e880" href="/ml">Price Predictor</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"style= "color:#f2e880" href="/tables">Tables</a>
-                </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link"style= "color:#f2e880" href="/data">Data</a>
-                </li> -->
-                <li class="nav-item">
-                    <a class="nav-link"style= "color:#f2e880" href="/resources">Resources</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" style= "color:#f2e880" href="/about">About</a>
-                </li>
-            </ul>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--convert the nav bar to small size with end the bar format-->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <div class= "collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link" style= "color:#f2e880" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style= "color:#f2e880" href="analysis.html">Analysis</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"style= "color:#f2e880" href="machine_learning.html">Price Predictor</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"style= "color:#f2e880" href="tables.html">Tables</a>
+            </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link"style= "color:#f2e880" href="/data">Data</a>
+            </li> -->
+            <li class="nav-item">
+                <a class="nav-link"style= "color:#f2e880" href="resources.html">Resources</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style= "color:#f2e880" href="about.html">About</a>
+            </li>
+        </ul>
+    </div>
+    </div>
+</nav>
+      
+  </header> 
+
+  <div class="bgimg bgimg-1" id="slider">
+    <div class="container-fluid" id="avocado">
+        <h1>C.A.D.O</h1>
+        <h2>COOL AVOCADO DATA OBSERVATIONS</h2>
+    </div>
+  </div>
+
+  <div id="slide2" class="container-fluid slide">
+
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>How it works</h1>
         </div>
-        </div>
-    </nav>
-    <!-- End of Navbar -->
+      </div>
 
-    <div class='container'>
-        <div class="row" style="font-family: Baloo Tamma 2, cursive;">
-            <div class='col-md-10'>
-                <div class='tableauPlaceholder' id='viz1619480528532' style='position: absolute;'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CadoCreations&#47;Dashboard-Organicvs_Conventional&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='100%' height='100%' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='CadoCreations&#47;Dashboard-Organicvs_Conventional' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CadoCreations&#47;Dashboard-Organicvs_Conventional&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1619480528532');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1016px';vizElement.style.height='991px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1016px';vizElement.style.height='991px';} else { vizElement.style.width='100%';vizElement.style.height='1127px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-            </div>
-        </div>
+
+    <div class="row">
+      <div class="col-md-3">
+         <i class="fas fa-arrow-circle-down"></i>
+         <div class="iconCaption">
+          <h5>Click</h5>
+         </div>
+         <div class="iconText">
+          <p>Click on any filter or hyperlink within a dashboard of your choosing to display your results.</p>
+         </div>
+      </div>
+      <div class="col-md-3">
+        <i class="fas fa-search"></i>
+         <div class="iconCaption">
+          <h5>Analyze</h5>
+         </div>
+         <div class="iconText">
+          <p>After selecting your filter, analyze the data to find answers to your unanswered questions.</p>
+         </div>
+      </div>
+      <div class="col-md-3">
+        <i class="fas fa-cubes"></i>
+         <div class="iconCaption">
+          <h5>Determine</h5>
+         </div>
+         <div class="iconText">
+          <p>Determine if you have all the information needed and if not...</p>
+         </div>
+      </div>
+      <div class="col-md-3">
+        <i class="fas fa-wifi"></i>
+         <div class="iconCaption">
+          <h5>Observe</h5>
+         </div>
+         <div class="iconText">
+          <p>Observe other data sets on our website.</p>
+         </div>
+      </div>
     </div>
 
+    <div class="video-container">
+    <div class="videoWrapper container-fluid">
+        <!--Tableau Dashboard-->
+        <div class='tableauPlaceholder' id='viz1619914090524' style='position: relative'><noscript><a href='#'><img alt='Story 4 - Organc vs. Conventional Profit ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CadoCreations&#47;Story4-Organcvs_ConventionalProfit&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='CadoCreations&#47;Story4-Organcvs_ConventionalProfit' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CadoCreations&#47;Story4-Organcvs_ConventionalProfit&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1619914090524');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1050px';vizElement.style.height='1020px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        
+    </div>
+    </div>
+    <div class="video-container2">
+    <div class="videoWrapper container-fluid">
+        <!--Tableau Dashboard-->
+        <div class='tableauPlaceholder' id='viz1619914915626' style='position: relative'><noscript><a href='#'><img alt='Expensive or not? ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CadoCreationspart2&#47;Expensiveornot&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='CadoCreationspart2&#47;Expensiveornot' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CadoCreationspart2&#47;Expensiveornot&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1619914915626');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1016px';vizElement.style.height='991px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>    
+    </div>
+
+</div>
+<!--Tableau visualizations below-->
+<div id="plans" class="container-fluid slide">
+  <h1>Observations</h1>
+  <div class="row">
+        <div class="col-lg-4">
+          <div class="card">
+            <img class="card-img-top" src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CadoCreationspart2&#47;BagsSaleSizevsYearlySales&#47;1_rss.png" alt="Card image cap">
+            <div class="card-body">
+              <h2 class="card-title">Yearly Bag Sales</h2>
+              <h5 class="card-title">Based on bag size</h5>
+              <p class="card-text"></p>
+              <button type="button" class="m-4 btn btn-outline-success">VIEW IN TABLEAU</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4">
+         <div class="card">
+            <img class="card-img-top" src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CadoCreations&#47;AverageProfitofanAvocado&#47;1_rss.png" alt="Card image cap">
+            <div class="card-body">
+              <h2 class="card-title">Average Monthly Profit</h2>
+              <h5 class="card-title">Based on avocado types</h5>
+              <p class="card-text"></p>
+              <button type="button" class="m-4 btn btn-outline-success">VIEW IN TABLEAU</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4">  
+         <div class="card">
+            <img class="card-img-top" src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CadoCreations&#47;TotalVolumnbyType&#47;1_rss.png" alt="Card image cap">
+            <div class="card-body">
+              <h2 class="card-title">Volume Predictions</h2>
+              <h5 class="card-title">Actual vs Estimate</h5>
+              <p class="card-text"></p>
+              <button type="button" class="m-4 btn btn-outline-success">VIEW IN TABLEAU</button>
+            </div>
+          </div>
+        </div>
+    </div>
+ 
+</div>
+
+
+
+<footer>
+  
+  
+
+<!--Added js file-->  
+  <script src="logic.js"></script>
+
+</footer>
 
 </body>
-
 </html>
