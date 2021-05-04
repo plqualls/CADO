@@ -49,59 +49,36 @@ function filterData(){
     price = parseFloat(price);
 
     console.log(date,price,type,region);
-    
+    // var filterTable = []
     d3.json("../static/js/data.json").then(data=> {
         console.log("promise fullfilled")
         
-        var filterTable = data.filter(item => {(item.date === date)
+        var filterTable = data.filter(item => ((item.date === date)
             && (item.price >= price)
         
             && (item.type === type)
-            && (item.geography === region);
-        console.log("filterTable", filterTable);
-        
-        });
-        generateTable(table, filterTable);
-
-    });
-    
-
-    // event.preventDefault();
-
-    // select the button(event)
-    
-
-
-    // call `on` (event listener) to run the function that will work 
-    
-        // console.log(this)
-    // filter the input from the table
-    //     filterTable = tableData.filter(item => (item.date === filterData("#date") || filterData("#date") === "")
-    //         && (item.price >= filterData("#price") || filterData("#price") === "")
+            && (item.geography === region)
             
-    //         && (item.type === filterData("#type") || filterData("#type") === "")
-    //         && (item.region === filterData("#region") || filterData("#region") === ""));
-    // console.log("filterTable", filterTable);
-    // generateTable(table, filterTable);
-
-
-};
-
+        
+        ));
+        generateTable(table, filterTable);
+        console.log("filterTable", filterTable);
+    });
 
     
 
-    
-
-
-
-// function optionChanged(userChoice) {
-//     filterData(userChoice)
-// }
-
-
+// reset the table from the begnning button 
+resetButton = d3.select("#reset-btn")
+resetButton.on("click", () => {
+    d3.json("../static/js/data.json").then(tableData => {
+    generateTable(table, tableData)
+});
 
 filterButton = d3.select("#filter-btn");
 filterButton.on("click", ()=>{
     console.log('filter button');
     filterData();
-})
+    });
+
+
+

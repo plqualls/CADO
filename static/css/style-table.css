@@ -220,7 +220,7 @@ select {
     #table-area tr td:first-child {
         font-size: 1.8em;
         font-weight: bold;
-        background: #1b3146;
+        background:#356211;
     }
     #table-area tr td:last-child {
         margin-bottom: 20px;
@@ -231,7 +231,7 @@ select {
         height: 1px;
         margin-top: 20px;
         content: " ";
-        background: aliceblue;
+        background:#f2e880;
     }
     #table-area td {
         font-size: 1.25em;
@@ -281,4 +281,42 @@ select {
     to {
         opacity: 1;
     }
+}
+
+.btn{
+    background-color: #356211;
+    color: #f2e880;
+    font-size: 15px;
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+
+.filters{
+    border: #212b0c;
+    text-align: center;
+    background-color: #f2e880;
+    margin-bottom: 3%;
+}
+
+.form-group {
+    background-color: #f2e880;
+}
+
+.list-group {
+    background-color: #f2e880;
+    border: #212b0c;
+}
+
+.filter{
+    background-color: #f2e880;
+    border: #212b0c;
+}
+
+hr {
+    color: #212b0c;
+}
+
+thead{
+    background-color:#c15c37;
+    color: #f2e880;
 }
