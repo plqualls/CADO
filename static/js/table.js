@@ -6,7 +6,17 @@ function dropdown() {
     })
 };
 
+function dropDates() {
+    console.log(dates)
+    dates.forEach(date => {
+        let dropdownDates = d3.select("#date");
+        // console.log(dropdownRegion)
+        dropdownDates.append("option").text(date)
+    })
+};
+
 dropdown();
+dropDates()
 
 var table = document.querySelector("tbody");
 
@@ -64,7 +74,7 @@ function filterData(){
         generateTable(table, filterTable);
         console.log("filterTable", filterTable);
     });
-
+}
     
 
 // reset the table from the begnning button 
@@ -72,13 +82,12 @@ resetButton = d3.select("#reset-btn")
 resetButton.on("click", () => {
     d3.json("../static/js/data.json").then(tableData => {
     generateTable(table, tableData)
+    });
 });
 
 filterButton = d3.select("#filter-btn");
 filterButton.on("click", ()=>{
     console.log('filter button');
     filterData();
-    });
-
-
+});
 
