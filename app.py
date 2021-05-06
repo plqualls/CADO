@@ -5,6 +5,7 @@ import pandas as pd
 import numpy as np
 import os
 from joblib import load
+import pickle
 
 
 # init app and class
@@ -84,7 +85,9 @@ columns =
 def predictions():
     post_data = request.form 
     #load the model:
-    model = load('finalized_model.sav')
+    filename = 'finalized_model.sav'
+    model = pickle.load(open(filename, 'rb'))
+    
     columns = ['total_volume', 'year', 
     # 'Albany', # Avoid perfect multicollinearity for all dummy variables notebook cell:19
     'Atlanta', 'Baltimore/Washington',
@@ -158,11 +161,7 @@ def data():
     
     return jsonify(out)
 
-# @app.route('/table')
-# def table():
-#     df = pd.read_csv('Tableau/avocado-updated-2020.csv')
-#     table = df.to_html()
-#     return table
+
 
 
 if __name__ == '__main__':

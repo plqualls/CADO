@@ -105,8 +105,7 @@
                                     <ul class="list-group" id="filters">
                                         <li class="filter list-group-item">
                                             <label for="date">Enter a Date</label>
-                                            <input class="form-control" id="date" type="text"
-                                                placeholder="2015-01-04">
+                                                <select id="date" name="date"></select>
                                                 <!-- value="1/4/2015" -->
                                         </li>
                                         <li class="filter list-group-item">
@@ -117,7 +116,7 @@
                                         </li>
                                         <li class="filter list-group-item">
                                             <label for="type">Enter a Type</label>
-                                            <select id="type" name="region">
+                                            <select id="type" name="type">
                                                 <!-- value = "conventional" -->
                                                 <option id='conventional' value="conventional">Conventional</option>
                                                 <option id='organic' value="organic">Organic</option>
@@ -183,6 +182,7 @@
     </footer>
 
     <!-- our JS -->
+    <script src="../static/js/dates.js"></script>
     <script src="../static/js/regions.js"></script>
     <script src="../static/js/table.js"></script>
     
